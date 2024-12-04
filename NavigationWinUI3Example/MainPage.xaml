@@ -11,7 +11,7 @@
 
     <Grid>
         <Border x:Name="AppTitleBar" Grid.Column="0" Background="Black" VerticalAlignment="Top" Height="44" >
-            <TextBlock x:Name="AppTitle" Text="Application Name" VerticalAlignment="Top" Margin="55,13,0, 0" />
+            <TextBlock x:Name="AppTitle" Text="{x:Bind AppName}" VerticalAlignment="Top" Margin="55,13,0, 0" />
         </Border>
         <NavigationView x:Name="nvSample8" 
                         Grid.Row="1"

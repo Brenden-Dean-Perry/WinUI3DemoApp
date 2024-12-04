@@ -24,9 +24,11 @@ namespace NavigationWinUI3Example
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private string AppName { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
+            AppName = ((App)Application.Current).AppName;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
