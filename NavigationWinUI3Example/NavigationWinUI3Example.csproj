@@ -13,7 +13,10 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Account.xaml" />
+    <None Remove="Calendar.xaml" />
     <None Remove="Home.xaml" />
+    <None Remove="Mail.xaml" />
     <None Remove="MainPage.xaml" />
     <None Remove="Settings.xaml" />
   </ItemGroup>
@@ -43,6 +46,21 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Calendar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Account.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Mail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Home.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -56,6 +74,9 @@
     <Page Update="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
   </ItemGroup>
 
   <!--

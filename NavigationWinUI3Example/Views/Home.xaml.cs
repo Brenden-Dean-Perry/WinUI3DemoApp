@@ -16,32 +16,30 @@ using Windows.Foundation.Collections;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace NavigationWinUI3Example
+namespace NavigationWinUI3Example.Views
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Settings : Page
+    public sealed partial class Home : Page
     {
-        public Settings()
+        public Home()
         {
             this.InitializeComponent();
-            NavigationCacheMode = NavigationCacheMode.Enabled;
         }
 
-        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage), TextBoxInput.Text);
-        }
+            base.OnNavigatedTo(e);
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            NavigationCacheMode = NavigationCacheMode.Enabled;
-        }
-
-        private void CheckBox_UnChecked(object sender, RoutedEventArgs e)
-        {
-            NavigationCacheMode = NavigationCacheMode.Disabled;
+            if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
+            {
+                Greeting.Text = "Hello " + (string)e.Parameter + "!!!";
+            }
+            else
+            {
+                Greeting.Text = "Hello!";
+            }
         }
     }
 }

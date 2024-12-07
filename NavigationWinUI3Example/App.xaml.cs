@@ -49,7 +49,7 @@ namespace NavigationWinUI3Example
             //Create a Frame to act as the navigation context
             Frame rootFrame = new Frame();
             rootFrame.NavigationFailed += OnNavigationFailed;
-            rootFrame.Navigate(typeof(MainPage), args.Arguments);
+            rootFrame.Navigate(typeof(Views.MainPage), args.Arguments);
 
             //Place the frame in the current window
             m_window.Content = rootFrame;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Page
-    x:Class="NavigationWinUI3Example.MainPage"
+    x:Class="NavigationWinUI3Example.Views.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:NavigationWinUI3Example"
@@ -16,16 +16,17 @@
         <NavigationView x:Name="nvSample8" 
                         Grid.Row="1"
                         PaneDisplayMode="Left"
+                        Background="Black"
                         IsTabStop="False"
                         IsBackEnabled="True"
                         BackRequested="NavigationViewControl_BackRequested"
                         SelectionChanged="NavigationView_SelectionChanged">
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Home" Icon="Home" ToolTipService.ToolTip="Home" Tag="NavigationWinUI3Example.Home"/>
-                <NavigationViewItem Content="Account" Icon="Contact" ToolTipService.ToolTip="Account" Tag="Account">
+                <NavigationViewItem Content="Home" Icon="Home" ToolTipService.ToolTip="Home" Tag="NavigationWinUI3Example.Views.Home"/>
+                <NavigationViewItem Content="Account" Icon="Contact" ToolTipService.ToolTip="Account" Tag="NavigationWinUI3Example.Views.Account">
                     <NavigationViewItem.MenuItems>
-                        <NavigationViewItem Content="Mail" Icon="Mail" ToolTipService.ToolTip="Mail" Tag="Mail"/>
-                        <NavigationViewItem Content="Calendar" Icon="Calendar" ToolTipService.ToolTip="Calendar" Tag="Calendar"/>
+                        <NavigationViewItem Content="Mail" Icon="Mail" ToolTipService.ToolTip="Mail" Tag="NavigationWinUI3Example.Views.Mail"/>
+                        <NavigationViewItem Content="Calendar" Icon="Calendar" ToolTipService.ToolTip="Calendar" Tag="NavigationWinUI3Example.Views.Calendar"/>
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
                 <NavigationViewItem Content="Document options" Icon="Page2" ToolTipService.ToolTip="Document options" SelectsOnInvoked="False">
@@ -41,15 +42,6 @@
             </NavigationView.FooterMenuItems>
             <Frame x:Name="contentFrame" />
         </NavigationView>
-
-        <StackPanel>
-            <TextBlock x:Name="pageTitle" 
-                       Text="Main page"
-                       HorizontalAlignment="Center"
-                       Margin="16" 
-                       Style="{StaticResource TitleTextBlockStyle}"/>
-            <TextBlock x:Name="Greeting" HorizontalAlignment="Center" ></TextBlock>
-        </StackPanel>
 
     </Grid>
 </Page>

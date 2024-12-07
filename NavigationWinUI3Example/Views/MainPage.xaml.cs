@@ -17,7 +17,7 @@ using Windows.Foundation.Collections;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace NavigationWinUI3Example
+namespace NavigationWinUI3Example.Views
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -31,26 +31,12 @@ namespace NavigationWinUI3Example
             AppName = ((App)Application.Current).AppName;
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-
-            if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
-            {
-                Greeting.Text = "Hello " + (string)e.Parameter + "!!!";
-            }
-            else
-            {
-                Greeting.Text = "Hello!";
-            }
-        }
-
         private void NavigationView_SelectionChanged(object sender, NavigationViewSelectionChangedEventArgs e)
         {
             var selectedItem = (NavigationViewItem)e.SelectedItem;
             if (e.IsSettingsSelected)
             {
-                Frame.Navigate(typeof(Settings), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
+                contentFrame.Navigate(typeof(Settings), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
             }
             else if (selectedItem != null && selectedItem.Tag.ToString() == "Extend")
             {
@@ -73,7 +59,9 @@ namespace NavigationWinUI3Example
 
                 if (pageType != null)
                 {
-                    Frame.Navigate(pageType);
+                    //Frame.Navigate(pageType);
+                    contentFrame.Navigate(pageType, null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
+
                 }
                 else
                 {
@@ -85,9 +73,9 @@ namespace NavigationWinUI3Example
 
         private void NavigationViewControl_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
         {
-            if (Frame.CanGoBack)
+            if (contentFrame.CanGoBack)
             {
-                Frame.GoBack();
+                contentFrame.GoBack();
             }
         }
 
