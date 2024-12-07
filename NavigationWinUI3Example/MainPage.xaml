@@ -39,7 +39,7 @@
                 <NavigationViewItem Content="About" Tag="About" Icon="ContactInfo" />
                 <NavigationViewItem Content="Extend Display" Tag="Extend" Icon="FullScreen" />
             </NavigationView.FooterMenuItems>
-            <Frame x:Name="contentFrame8" />
+            <Frame x:Name="contentFrame" />
         </NavigationView>
 
         <StackPanel>

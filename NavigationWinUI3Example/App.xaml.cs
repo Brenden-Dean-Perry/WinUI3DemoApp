@@ -28,6 +28,7 @@ namespace NavigationWinUI3Example
     {
         
         public string AppName = "Demo App";
+        private Window m_window;
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -60,6 +61,5 @@ namespace NavigationWinUI3Example
             throw new Exception("Failed to load page " + e.SourcePageType.FullName);
         }
 
-        private Window m_window;
     }
 }
