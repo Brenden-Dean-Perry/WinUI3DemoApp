@@ -61,14 +61,12 @@ namespace NavigationWinUI3Example.Views
                 {
                     //Frame.Navigate(pageType);
                     contentFrame.Navigate(pageType, null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
-
                 }
                 else
                 {
                     ShowDialog_Click(this, null);
                 }
-            }
-                
+            }        
         }
 
         private void NavigationViewControl_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)

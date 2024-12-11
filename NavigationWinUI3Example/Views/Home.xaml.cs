@@ -41,5 +41,6 @@ namespace NavigationWinUI3Example.Views
                 Greeting.Text = "Hello!";
             }
         }
+
     }
 }

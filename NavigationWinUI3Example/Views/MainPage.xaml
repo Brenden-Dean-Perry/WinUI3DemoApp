@@ -16,7 +16,6 @@
         <NavigationView x:Name="nvSample8" 
                         Grid.Row="1"
                         PaneDisplayMode="Left"
-                        Background="Black"
                         IsTabStop="False"
                         IsBackEnabled="True"
                         BackRequested="NavigationViewControl_BackRequested"
@@ -37,6 +36,7 @@
                 </NavigationViewItem>
             </NavigationView.MenuItems>
             <NavigationView.FooterMenuItems>
+                <NavigationViewItemSeparator></NavigationViewItemSeparator>
                 <NavigationViewItem Content="About" Tag="About" Icon="ContactInfo" />
                 <NavigationViewItem Content="Extend Display" Tag="Extend" Icon="FullScreen" />
             </NavigationView.FooterMenuItems>
