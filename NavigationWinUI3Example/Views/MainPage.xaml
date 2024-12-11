@@ -16,6 +16,8 @@
         <NavigationView x:Name="nvSample8" 
                         Grid.Row="1"
                         PaneDisplayMode="Left"
+                        AlwaysShowHeader="True"
+                        IsTitleBarAutoPaddingEnabled="False"
                         IsTabStop="False"
                         IsBackEnabled="True"
                         BackRequested="NavigationViewControl_BackRequested"
@@ -40,7 +42,7 @@
                 <NavigationViewItem Content="About" Tag="About" Icon="ContactInfo" />
                 <NavigationViewItem Content="Extend Display" Tag="Extend" Icon="FullScreen" />
             </NavigationView.FooterMenuItems>
-            <Frame x:Name="contentFrame" />
+            <Frame x:Name="contentFrame" Padding="0, 21, 0,0" Background="Black"/>
         </NavigationView>
 
     </Grid>

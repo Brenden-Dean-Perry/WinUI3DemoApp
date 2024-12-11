@@ -9,12 +9,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+
     <Grid>
         <StackPanel>
+            <TextBlock></TextBlock>
             <TextBlock x:Name="pageTitle" 
                Text="Home"
+               Margin="16"
                HorizontalAlignment="Center"
-               Margin="16" 
                Style="{StaticResource TitleTextBlockStyle}"/>
             <TextBlock></TextBlock>
             <TextBlock x:Name="Greeting" HorizontalAlignment="Center" ></TextBlock>

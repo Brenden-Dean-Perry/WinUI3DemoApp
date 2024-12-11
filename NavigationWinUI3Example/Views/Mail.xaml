@@ -10,11 +10,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBlock></TextBlock>
         <TextBlock x:Name="Header" 
            Text="Mail" 
            HorizontalAlignment="Center"
            Margin="16"
            Style="{StaticResource TitleTextBlockStyle}"></TextBlock>
-        <TextBox> </TextBox>
     </Grid>
 </Page>
