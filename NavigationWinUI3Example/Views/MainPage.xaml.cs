@@ -42,8 +42,6 @@ namespace NavigationWinUI3Example.Views
             {
                     var newWindow = WindowHelper.CreateWindow();
                     var rootPage = new Frame();
-                    //var rootPage = new NavigationRootPage();
-                    //rootPage.RequestedTheme = ThemeHelper.RootTheme;
                     newWindow.Content = rootPage;
                     newWindow.Activate();
 
